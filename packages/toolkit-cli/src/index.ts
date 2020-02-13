@@ -11,7 +11,7 @@ program
     .action(actions.dev)
 program
     .command('build')
-    .description('Builds your Snips action.')
+    .description('Builds your Hermod action.')
     .option('-e, --entry <file>', 'A filename which act as the entry point to build your project.')
     .option('-o, --output <path>', 'A path for the bundled file to be saved in.')
     .action(actions.build)
@@ -24,7 +24,7 @@ program
     .action(actions.test)
 program
     .command('run')
-    .description('Runs your Snips action.')
+    .description('Runs your Hermod action.')
     .option('-t, --target <path>', 'The path to the directory containing the built action.')
     .option('-c, --config-path <path>', 'Path to the configuration file.')
     .option('-ns, --no-sandbox', 'Disables the sandbox.')

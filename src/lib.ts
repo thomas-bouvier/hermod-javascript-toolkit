@@ -1,2 +1,2 @@
-export * from 'snips-toolkit-tests'
-export * from 'snips-toolkit-utils'
+export * from 'hermod-toolkit-tests'
+export * from 'hermod-toolkit-utils'

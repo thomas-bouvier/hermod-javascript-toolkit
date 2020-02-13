@@ -1,14 +1,14 @@
 {
-  "name": "snips-toolkit-cli",
+  "name": "hermod-toolkit-cli",
   "version": "1.0.4",
-  "description": "Snips toolkit CLI tool.",
+  "description": "Hermod toolkit CLI tool.",
   "main": "dist/index.js",
   "module": "esm/index.js",
   "author": "Julien Elbaz",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/snipsco/snips-javascript-toolkit"
+    "url": "https://github.com/thomas-bouvier/hermod-toolkit"
   },
   "files": [
     "dist",
@@ -37,7 +37,7 @@
     "jest": "^24.8.0",
     "mqtt": "^3.0.0",
     "nodemon-webpack-plugin": "^4.0.8",
-    "snips-toolkit-runner": "^1.0.0",
+    "hermod-toolkit-runner": "^1.0.0",
     "ts-jest": "^24.0.2",
     "webpack": "^4.35.0"
   }

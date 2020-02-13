@@ -3,7 +3,7 @@
 import fs from 'fs'
 import path from 'path'
 import chalk from 'chalk'
-import { sandboxedRunner, standardRunner } from 'snips-toolkit-runner'
+import { sandboxedRunner, standardRunner } from 'hermod-toolkit-runner'
 
 export function run({ target, configPath, sandbox }) {
     console.log(chalk.bold('> Running your action…'))

@@ -12,6 +12,6 @@ export * from 'wretch'
 export function http(url?: string, options?: WretcherOptions): Wretcher {
     return wretch(url, options)
         .polyfills({
-            fetch: global['__DEV__'] ? global['SnipsToolkit'].fetch : fetch
+            fetch: global['__DEV__'] ? global['HermodToolkit'].fetch : fetch
         })
 }

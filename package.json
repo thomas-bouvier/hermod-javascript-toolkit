@@ -1,16 +1,16 @@
 {
-  "name": "snips-toolkit",
+  "name": "hermod-toolkit",
   "version": "1.1.0",
-  "description": "Toolkit for writing Snips actions.",
+  "description": "Everything you need to write Hermod actions in Node.js.",
   "main": "dist/lib.js",
   "module": "esm/lib.js",
   "types": "dist/lib.d.ts",
   "bin": {
-    "snips-toolkit": "./dist/cli.js"
+    "hermod-toolkit": "./dist/cli.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/snipsco/snips-javascript-toolkit"
+    "url": "https://github.com/thomas-bouvier/hermod-toolkit"
   },
   "sideEffects": false,
   "files": [
@@ -44,9 +44,9 @@
   },
   "dependencies": {
     "node-fetch": "^2.6.0",
-    "snips-toolkit-cli": "^1.0.0",
-    "snips-toolkit-runner": "^1.0.0",
-    "snips-toolkit-tests": "^1.0.0",
-    "snips-toolkit-utils": "^1.0.0"
+    "hermod-toolkit-cli": "^1.0.0",
+    "hermod-toolkit-runner": "^1.0.0",
+    "hermod-toolkit-tests": "^1.0.0",
+    "hermod-toolkit-utils": "^1.0.0"
   }
 }

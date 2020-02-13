@@ -68,7 +68,7 @@ export async function build ({ entry = defaultEntry, output = defaultOutput }) {
 
                 const packageJsonExists = fs.existsSync(packageJsonPath)
 
-                if(packageJsonExists) {
+                if (packageJsonExists) {
                     try {
                         const json = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'))
                         json.sandbox = formattedModuleList

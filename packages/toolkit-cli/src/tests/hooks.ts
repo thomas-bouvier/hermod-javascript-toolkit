@@ -3,7 +3,7 @@
 import { createServer, AddressInfo } from 'net'
 import { spawn } from 'child_process'
 import mqtt from 'mqtt'
-import { standardRunner, sandboxedRunner } from 'snips-toolkit-runner'
+import { standardRunner, sandboxedRunner } from 'hermod-toolkit-runner'
 
 function getFreePort(): Promise<number> {
     return new Promise((resolve, reject) => {
@@ -26,10 +26,10 @@ beforeAll(async () => {
     // To print full mosquitto logs, replace stdio: 'ignore' with stdio: 'inherit'
     const mosquitto = spawn('mosquitto', ['-p', '' + mosquittoPort, '-v'], { stdio: 'ignore' })
     console.log('Mosquitto ready!')
-    global['SnipsToolkit'].setup.mosquitto = mosquitto
-    global['SnipsToolkit'].setup.mosquittoPort = mosquittoPort
+    global['HermodToolkit'].setup.mosquitto = mosquitto
+    global['HermodToolkit'].setup.mosquittoPort = mosquittoPort
     const runner = global['sandboxedRunner'] ? sandboxedRunner : standardRunner
-    global['SnipsToolkit'].setup.killHermes = await runner({
+    global['HermodToolkit'].setup.killHermes = await runner({
         hermesOptions: {
             address: 'localhost:' + mosquittoPort,
             logs: true
@@ -43,7 +43,7 @@ beforeAll(async () => {
 })
 
 beforeEach(done => {
-    const client = mqtt.connect(`mqtt://localhost:${global['SnipsToolkit'].setup.mosquittoPort}`)
+    const client = mqtt.connect(`mqtt://localhost:${global['HermodToolkit'].setup.mosquittoPort}`)
     client.on('connect', function () {
         done()
     })
@@ -51,15 +51,15 @@ beforeEach(done => {
         client.end(true)
         throw err
     })
-    global['SnipsToolkit'].setup.mqttClient = client
+    global['HermodToolkit'].setup.mqttClient = client
 })
 
 afterEach(() => {
-    global['SnipsToolkit'].setup.mqttClient.end(true)
+    global['HermodToolkit'].setup.mqttClient.end(true)
 })
 
 afterAll(done => {
-    const { mosquitto, killHermes } = global['SnipsToolkit'].setup
+    const { mosquitto, killHermes } = global['HermodToolkit'].setup
     setTimeout(() => {
         mosquitto.kill()
         console.log('Mosquitto killed.')

@@ -8,7 +8,7 @@ export default class Session {
     private sessionId: string
 
     constructor() {
-        this.mqtt = global['SnipsToolkit'].setup.mqttClient
+        this.mqtt = global['HermodToolkit'].setup.mqttClient
         this.sessionId = ''+ sessionId++
     }
 

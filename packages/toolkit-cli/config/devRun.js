@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 
 const fs = require('fs')
-const { sandboxedRunner, standardRunner } = require('snips-toolkit-runner')
+const { sandboxedRunner, standardRunner } = require('hermod-toolkit-runner')
 
 const target = process.argv[2]
 const configPath = process.argv[3] === '-noconf' ? null : process.argv[3]

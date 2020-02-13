@@ -1,21 +1,21 @@
-# Snips Toolkit
+# hermod-toolkit
 
-### Everything you need in order to write Snips actions.
+Everything you need to write Hermod actions in Node.js.
 
 ## Setup
 
 ```sh
-npm i snips-toolkit
+npm i hermod-toolkit
 ```
 
 Then use it in your package.json file scripts.
 
 ```json
 "scripts": {
-    "build": "snips-toolkit build",
-    "dev": "snips-toolkit dev",
-    "test": "snips-toolkit test '^.*\\.spec\\.[jt]s$'",
-    "launch": "snips-toolkit run"
+    "build": "hermod-toolkit build",
+    "dev": "hermod-toolkit dev",
+    "test": "hermod-toolkit test '^.*\\.spec\\.[jt]s$'",
+    "launch": "hermod-toolkit run"
 }
 ```
 
@@ -42,11 +42,11 @@ Assumes that your action is structured in the following way by default:
 
 ## Command line
 
-#### `snips-toolkit --help`
+#### `hermod-toolkit --help`
 
 Displays a help message and exits.
 
-#### `snips-toolkit build`
+#### `hermod-toolkit build`
 
 Builds your action to `./dist/index.js` using [webpack](https://webpack.js.org/).
 
@@ -68,9 +68,9 @@ This command will warn if your action code uses node.js native modules, and they
 ]
 ```
 
-#### `snips-toolkit dev`
+#### `hermod-toolkit dev`
 
-Automatically rebuilds and run the Snips action on file change.
+Automatically rebuilds and run the Hermod action on file change.
 
 You can debug the action by connecting a debugger to the 9229 port.
 Check [the node.js website](https://nodejs.org/de/docs/guides/debugging-getting-started/) for more details.
@@ -78,22 +78,22 @@ Check [the node.js website](https://nodejs.org/de/docs/guides/debugging-getting-
 Use the `-c/--config-path` if you need to use custom hermes options.
 Use the `-ns/--no-sandbox` to disable the sandbox.
 
-#### `snips-toolkit test [files]`
+#### `hermod-toolkit test [files]`
 
 Runs your test suite with [jest](https://jestjs.io/).
 
 Use the `-s/--sandbox` flag to run the tests in a sandboxed environment.
 
-#### `snips-toolkit run`
+#### `hermod-toolkit run`
 
-Runs your Snips action.
+Runs your Hermod action.
 
 Use the `-c/--config-path` if you need to use custom hermes options.
 Use the `-ns/--no-sandbox` to disable the sandbox.
 
 ## Utils
 
-#### `import { config } from 'snips-toolkit'`
+#### `import { config } from 'hermod-toolkit'`
 
 Initialize once by calling `.init`, then use `.get` to retrieve the configuration.
 
@@ -109,7 +109,7 @@ const configuration = config.get()
 
 *Depends on node.js modules `fs`, `path`.*
 
-#### `import { i18n } from 'snips-toolkit'`
+#### `import { i18n } from 'hermod-toolkit'`
 
 Initialize once by calling `.init`.
 
@@ -139,7 +139,7 @@ const translation = i18n.randomTranslation(keys, options)
 
 *Depends on node.js modules `fs`, `path`.*
 
-#### `import { http } from 'snips-toolkit'`
+#### `import { http } from 'hermod-toolkit'`
 
 An http client using [wretch](https://github.com/elbywan/wretch).
 
@@ -154,7 +154,7 @@ const bulbasaur = await pokeapi
 
 *Depends on node.js modules `http`, `https`, `stream`, `zlib`, `url`.*
 
-#### `import { logger } from 'snips-toolkit'`
+#### `import { logger } from 'hermod-toolkit'`
 
 A logger using [debug](https://github.com/visionmedia/debug).
 
@@ -174,7 +174,7 @@ logger.error('debug')
 
 *Depends on node.js modules `tty`, `util`, `os`.*
 
-#### `import { handler } from 'snips-toolkit'`
+#### `import { handler } from 'hermod-toolkit'`
 
 Utilities for handling hermes callbacks.
 
@@ -187,7 +187,7 @@ handler.wrap((msg, flow) => {
 
 *Depends on internal modules `i18n`, `logger`.*
 
-#### `import { message } from 'snips-toolkit'`
+#### `import { message } from 'hermod-toolkit'`
 
 Utilities for parsing hermes messages.
 
@@ -212,7 +212,7 @@ const mySlot = message.getSlotsByName(
 const confidence = message.getAsrConfidence(msg)
 ```
 
-#### `import { camelize } from 'snips-toolkit'`
+#### `import { camelize } from 'hermod-toolkit'`
 
 Camelcase utilities using the [camelcase](https://github.com/sindresorhus/camelcase) package.
 
@@ -242,8 +242,8 @@ And add the `-c` flag in the `package.json` file.
 
 ```json
 "scripts": {
-    "dev": "snips-toolkit dev -c ./hermes_config.json",
-    "launch": "snips-toolkit run -c ./hermes_config.json"
+    "dev": "hermod-toolkit dev -c ./hermes_config.json",
+    "launch": "hermod-toolkit run -c ./hermes_config.json"
 }
 ```
 
@@ -255,11 +255,11 @@ During unit tests, your action code is run is parallel with the tests and i18n/h
 
 #### http
 
-You can use the provided `SnipsToolkit.mock.http` global function to override http calls automatically during tests.
+You can use the provided `HermodToolkit.mock.http` global function to override http calls automatically during tests.
 
 ```js
 // Place this code in the root of the test file to mock.
-SnipsToolkit.mock.http(fetchMock => {
+HermodToolkit.mock.http(fetchMock => {
     // Define as many mocks as you need.
     // See http://www.wheresrhys.co.uk/fetch-mock for API details
     fetchMock.mock('https://my.super.api/route', {
@@ -297,10 +297,10 @@ Returns when mocked: (in stringified form)
 
 #### globals
 
-You can use the provided `SnipsToolkit.mock.globals` global function to override or define global variables.
+You can use the provided `HermodToolkit.mock.globals` global function to override or define global variables.
 
 ```js
-SnipsToolkit.mock.globals(globals => {
+HermodToolkit.mock.globals(globals => {
     // Mocks the Date object in a crude way.
     const BackupedDate = global.Date
     const freezedTime = 1550835788763
@@ -322,7 +322,7 @@ SnipsToolkit.mock.globals(globals => {
 To simulate dialogue session rounds, you can use the `Session` helper that will pass hermes messages between your test and action code.
 
 ```js
-import { Test } from 'snips-toolkit'
+import { Test } from 'hermod-toolkit'
 
 /* ... */
 
@@ -353,3 +353,7 @@ expect(options.name).toBe('bulbasaur')
 expect(options.weight).toBe(69)
 expect(options.height).toBe(7)
 ```
+
+## Credits
+
+Original work by [@elbywan](https://github.com/elbywan) from [Snips](https://github.com/snipsco).

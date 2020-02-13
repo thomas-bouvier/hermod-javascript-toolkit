@@ -9,7 +9,7 @@ declare global {
     export type ConfigMockInitializer = (config: GenericObj) => void
     export type GlobalsMockInitializer = (date: GenericObj) => void
 
-    export const SnipsToolkit : {
+    export const HermodToolkit : {
         fetch: FetchMockSandbox,
         config: GenericObj,
         globals: GenericObj,

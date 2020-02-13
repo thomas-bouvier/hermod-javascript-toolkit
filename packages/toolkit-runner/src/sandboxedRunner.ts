@@ -77,11 +77,11 @@ export const sandboxedRunner: Runner = function ({
                     if(global['__DEV__']) {
                         [
                             '__DEV__',
-                            'SnipsToolkit'
+                            'HermodToolkit'
                         ].forEach(prop => {
                             sandbox[prop] = global[prop]
                         })
-                        Object.entries(global['SnipsToolkit']['globals'])
+                        Object.entries(global['HermodToolkit']['globals'])
                             .forEach(([ key, value ]) => {
                                 sandbox[key]= value
                             })

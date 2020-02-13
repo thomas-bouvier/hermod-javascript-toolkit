@@ -1,14 +1,14 @@
 {
-  "name": "snips-toolkit-runner",
+  "name": "hermod-toolkit-runner",
   "version": "1.1.0",
-  "description": "Snips toolkit runner.",
+  "description": "Hermod toolkit runner.",
   "main": "dist/index.js",
   "module": "esm/index.js",
   "author": "Julien Elbaz",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/snipsco/snips-javascript-toolkit"
+    "url": "https://github.com/thomas-bouvier/hermod-toolkit"
   },
   "files": [
     "dist",
