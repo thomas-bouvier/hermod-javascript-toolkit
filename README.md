@@ -1,10 +1,11 @@
-# hermod-toolkit
+# hermod-javascript-toolkit
 
-Everything you need to write Hermod actions in Node.js.
+Everything you need to write Hermod actions in JavaScript or TypeScript.
 
 ## Setup
 
 ```sh
+# Run this in your favourite terminal
 npm i hermod-toolkit
 ```
 
