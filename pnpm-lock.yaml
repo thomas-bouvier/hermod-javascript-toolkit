@@ -2,10 +2,10 @@ importers:
   .:
     dependencies:
       node-fetch: 2.6.0
-      snips-toolkit-cli: 'link:packages/toolkit-cli'
-      snips-toolkit-runner: 'link:packages/toolkit-runner'
-      snips-toolkit-tests: 'link:packages/toolkit-tests'
-      snips-toolkit-utils: 'link:packages/toolkit-utils'
+      hermod-toolkit-cli: 'link:packages/toolkit-cli'
+      hermod-toolkit-runner: 'link:packages/toolkit-runner'
+      hermod-toolkit-tests: 'link:packages/toolkit-tests'
+      hermod-toolkit-utils: 'link:packages/toolkit-utils'
     devDependencies:
       '@types/debug': 4.1.5
       '@types/fetch-mock': 7.3.1
@@ -34,10 +34,10 @@ importers:
       eslint-plugin-jest: ^22.7.0
       jest-haste-map: ^24.8.1
       node-fetch: ^2.6.0
-      snips-toolkit-cli: ^1.0.0
-      snips-toolkit-runner: ^1.0.0
-      snips-toolkit-tests: ^1.0.0
-      snips-toolkit-utils: ^1.0.0
+      hermod-toolkit-cli: ^1.0.0
+      hermod-toolkit-runner: ^1.0.0
+      hermod-toolkit-tests: ^1.0.0
+      hermod-toolkit-utils: ^1.0.0
       typescript: ^3.3.4000
   packages/toolkit-cli:
     dependencies:
@@ -54,7 +54,7 @@ importers:
       jest: 24.9.0
       mqtt: 3.0.0
       nodemon-webpack-plugin: 4.1.1_webpack@4.41.2
-      snips-toolkit-runner: 'link:../toolkit-runner'
+      hermod-toolkit-runner: 'link:../toolkit-runner'
       ts-jest: 24.1.0_jest@24.9.0
       webpack: 4.41.2_webpack@4.41.2
     specifiers:
@@ -71,7 +71,7 @@ importers:
       jest: ^24.8.0
       mqtt: ^3.0.0
       nodemon-webpack-plugin: ^4.0.8
-      snips-toolkit-runner: ^1.0.0
+      hermod-toolkit-runner: ^1.0.0
       ts-jest: ^24.0.2
       webpack: ^4.35.0
   packages/toolkit-runner:

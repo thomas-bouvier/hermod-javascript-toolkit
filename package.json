@@ -1,7 +1,7 @@
 {
   "name": "hermod-toolkit",
   "version": "1.1.0",
-  "description": "Everything you need to write Hermod actions in Node.js.",
+  "description": "Everything you need to write Hermod actions in JavaScript or TypeScript.",
   "main": "dist/lib.js",
   "module": "esm/lib.js",
   "types": "dist/lib.d.ts",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/thomas-bouvier/hermod-toolkit"
+    "url": "https://github.com/thomas-bouvier/hermod-javascript-toolkit"
   },
   "sideEffects": false,
   "files": [
@@ -25,7 +25,12 @@
     "clean": "rimraf dist && rimraf esm",
     "publish:all": "pnpm recursive exec -- pnpm publish"
   },
-  "author": "Julien Elbaz",
+  "author": "Thomas Bouvier <contact@thomas-bouvier.io>",
+  "contributors": [
+    {
+      "name": "Julien Elbaz"
+    }
+  ],
   "license": "MIT",
   "devDependencies": {
     "@types/debug": "^4.1.2",
