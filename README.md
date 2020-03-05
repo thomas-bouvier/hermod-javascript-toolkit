@@ -1,5 +1,7 @@
 # hermod-javascript-toolkit
 
+[![npm](https://img.shields.io/npm/v/hermod-toolkit.svg)](https://www.npmjs.com/package/hermod-toolkit)
+
 Everything you need to write Hermod actions in JavaScript or TypeScript.
 
 ## Setup
