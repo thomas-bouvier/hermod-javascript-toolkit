@@ -1,4 +1,4 @@
-import { IntentMessage, IntentNotRecognizedMessage, SessionStartedMessage, FlowContinuation, FlowActionReturn } from 'hermes-javascript/types';
+import { IntentMessage, IntentNotRecognizedMessage, SessionStartedMessage, FlowContinuation, FlowActionReturn } from 'hermes-protocol/types';
 export declare type HandlerMessages = IntentMessage | IntentNotRecognizedMessage | SessionStartedMessage;
 export declare type Handler<MessageType extends HandlerMessages = IntentMessage> = (message: MessageType, flow: FlowContinuation, ...args: any[]) => FlowActionReturn;
 export declare function intentMessageGuard(msg: HandlerMessages): msg is IntentMessage;

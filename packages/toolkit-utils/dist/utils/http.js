@@ -18,7 +18,7 @@ __export(require("wretch"));
 function http(url, options) {
     return wretch_1.default(url, options)
         .polyfills({
-        fetch: global['__DEV__'] ? global['SnipsToolkit'].fetch : node_fetch_1.default
+        fetch: global['__DEV__'] ? global['HermodToolkit'].fetch : node_fetch_1.default
     });
 }
 exports.http = http;

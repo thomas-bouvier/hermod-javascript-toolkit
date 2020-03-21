@@ -10,7 +10,7 @@ export * from 'wretch';
 export function http(url, options) {
     return wretch(url, options)
         .polyfills({
-        fetch: global['__DEV__'] ? global['SnipsToolkit'].fetch : fetch
+        fetch: global['__DEV__'] ? global['HermodToolkit'].fetch : fetch
     });
 }
 //# sourceMappingURL=http.js.map

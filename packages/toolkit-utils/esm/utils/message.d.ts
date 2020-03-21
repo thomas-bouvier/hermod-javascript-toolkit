@@ -1,4 +1,4 @@
-import { IntentMessage, NluSlot, slotType } from 'hermes-javascript/types';
+import { IntentMessage, NluSlot, slotType } from 'hermes-protocol/types';
 declare type GetSlotsByNameReturn<T, S extends slotType> = T extends true ? NluSlot<S> | null : T extends undefined ? NluSlot<S>[] : T extends false ? NluSlot<S>[] : NluSlot<S>[];
 export declare const message: {
     /**

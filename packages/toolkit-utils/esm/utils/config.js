@@ -30,8 +30,8 @@ export const config = {
             // When in dev mode, add mocks.
             if (global['__DEV__']) {
                 const initialConfig = Object.assign({}, _config);
-                const mockedConfig = Object.assign({}, global['SnipsToolkit'].config);
-                _config = global['SnipsToolkit'].config;
+                const mockedConfig = Object.assign({}, global['HermodToolkit'].config);
+                _config = global['HermodToolkit'].config;
                 Object.assign(_config, initialConfig, mockedConfig);
             }
             // If no locale is specified, add default locale.

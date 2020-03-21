@@ -1,4 +1,4 @@
-export declare type SnipsConfig = {
+export declare type HermodConfig = {
     [key: string]: string;
 };
 /**
@@ -8,9 +8,9 @@ export declare const config: {
     /**
      * Get the configuration.
      */
-    get(): SnipsConfig;
+    get(): HermodConfig;
     /**
      * Reads the configuration file located at `./config.ini`.
      */
-    init(): SnipsConfig;
+    init(): HermodConfig;
 };

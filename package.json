@@ -38,10 +38,10 @@
     "@types/ini": "^1.3.30",
     "@types/istanbul-lib-coverage": "^2.0.1",
     "@types/jest": "^25.1.4",
-    "@types/node": "^13.9.0",
+    "@types/node": "^13.9.2",
     "@types/yargs": "^15.0.4",
-    "@typescript-eslint/eslint-plugin": "^2.22.0",
-    "@typescript-eslint/parser": "^2.22.0",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
     "eslint": "^6.8.0",
     "eslint-plugin-jest": "^23.8.2",
     "jest-haste-map": "^25.1.0",
@@ -49,9 +49,9 @@
   },
   "dependencies": {
     "node-fetch": "^2.6.0",
-    "hermod-toolkit-cli": "^1.0.4",
-    "hermod-toolkit-runner": "^1.1.0",
-    "hermod-toolkit-tests": "^1.1.0",
-    "hermod-toolkit-utils": "^1.1.0"
+    "hermod-toolkit-cli": "^1.0.5",
+    "hermod-toolkit-runner": "^1.1.1",
+    "hermod-toolkit-tests": "^1.1.1",
+    "hermod-toolkit-utils": "^1.1.2"
   }
 }
