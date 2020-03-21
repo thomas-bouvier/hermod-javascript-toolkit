@@ -7,7 +7,7 @@ import {
     SessionStartedMessage,
     FlowContinuation,
     FlowActionReturn
-} from 'hermes-javascript/types'
+} from 'hermes-protocol/types'
 
 export type HandlerMessages = IntentMessage | IntentNotRecognizedMessage | SessionStartedMessage
 export type Handler<MessageType extends HandlerMessages = IntentMessage> = (

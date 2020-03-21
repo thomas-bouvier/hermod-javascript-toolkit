@@ -22,8 +22,8 @@
     "clean": "rimraf dist && rimraf esm"
   },
   "devDependencies": {
-    "fetch-mock": "^7.3.3",
-    "hermes-javascript": "^0.4.1"
+    "fetch-mock": "^9.2.1",
+    "hermes-protocol": "^0.4.2"
   },
   "dependencies": {
     "mqtt": "^3.0.0"

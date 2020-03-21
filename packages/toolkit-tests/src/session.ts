@@ -1,5 +1,5 @@
 import { MqttClient } from 'mqtt'
-import { ContinueSessionMessage, EndSessionMessage } from 'hermes-javascript/types'
+import { ContinueSessionMessage, EndSessionMessage } from 'hermes-protocol/types'
 
 let sessionId = 0
 

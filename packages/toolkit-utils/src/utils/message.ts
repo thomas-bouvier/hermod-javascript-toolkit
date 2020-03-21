@@ -1,4 +1,4 @@
-import { IntentMessage, NluSlot, slotType } from 'hermes-javascript/types'
+import { IntentMessage, NluSlot, slotType } from 'hermes-protocol/types'
 
 function geometricMean (dataSet: number[]) {
     return Math.pow(dataSet.reduce((accumulator, element) => accumulator * element, 1), 1 / dataSet.length)

@@ -1,7 +1,7 @@
 import path from 'path'
 // Important: load only types here!
 // Otherwise it will mess up with the jest and the ref module that cannot be loaded twice.
-import { Hermes, Done } from 'hermes-javascript'
+import { Hermes, Done } from 'hermes-protocol'
 import { Runner } from './types'
 
 export const standardRunner: Runner = function ({
@@ -16,8 +16,8 @@ export const standardRunner: Runner = function ({
     const { name } = require(path.join(cwd, 'package.json'))
 
     return new Promise((resolve, reject) => {
-        // Important: Asynchronously load hermes-javascript to prevent ref/jest issues.
-        require('hermes-javascript').withHermes((hermes: Hermes, done: Done) => {
+        // Important: Asynchronously load hermes-protocol to prevent ref/jest issues.
+        require('hermes-protocol').withHermes((hermes: Hermes, done: Done) => {
             try {
                 if(cwd)
                     process.cwd = () => cwd

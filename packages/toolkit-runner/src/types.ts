@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { HermesOptions } from 'hermes-javascript/types'
+import { HermesOptions } from 'hermes-protocol/types'
 
 export type RunnerOptions = {
     target?: string,

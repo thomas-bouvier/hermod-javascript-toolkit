@@ -231,7 +231,7 @@ const camelizedObject = camelizeKeys(object)
 
 ## Hermes configuration
 
-In order to pass custom [hermes options](https://github.com/snipsco/hermes-protocol/tree/develop/platforms/hermes-javascript#hermes-class), you can use the `-c` flag to specify the path to a configuration file.
+In order to pass custom [hermes options](https://github.com/thomas-bouvier/hermes-protocol/tree/develop/platforms/hermes-javascript#hermes-class), you can use the `-c` flag to specify the path to a configuration file.
 
 For instance, if you are using an mqtt broker running on a different machine, you could add options in a file named `hermes_config.json`.
 

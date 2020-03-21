@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "debug": "^4.1.1",
-    "hermes-javascript": "^0.4.1",
-    "vm2": "^3.8.2"
+    "hermes-protocol": "^0.4.2",
+    "vm2": "^3.8.4"
   }
 }

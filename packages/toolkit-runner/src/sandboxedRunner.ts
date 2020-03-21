@@ -2,7 +2,7 @@ import path from 'path'
 import { NodeVM, VMScript} from 'vm2'
 // Important: load only types here!
 // Otherwise it will mess up with the jest and the ref module that cannot be loaded twice.
-import { Hermes, Done } from 'hermes-javascript'
+import { Hermes, Done } from 'hermes-protocol'
 import { Runner } from './types'
 
 const bootstrap = new VMScript(`
@@ -52,8 +52,8 @@ export const sandboxedRunner: Runner = function ({
     } = runnerOptions
 
     return new Promise((resolve, reject) => {
-        // Important: Asynchronously load hermes-javascript to prevent ref/jest issues.
-        require('hermes-javascript').withHermes((hermes: Hermes, done: Done) => {
+        // Important: Asynchronously load hermes-protocol to prevent ref/jest issues.
+        require('hermes-protocol').withHermes((hermes: Hermes, done: Done) => {
             try {
                 let vm
                 if(reusable && reusableVMMap.has(target)) {
