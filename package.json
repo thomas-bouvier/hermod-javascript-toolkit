@@ -49,7 +49,7 @@
   },
   "dependencies": {
     "node-fetch": "^2.6.0",
-    "hermod-toolkit-cli": "^1.0.5",
+    "hermod-toolkit-cli": "^1.0.6",
     "hermod-toolkit-runner": "^1.1.1",
     "hermod-toolkit-tests": "^1.1.1",
     "hermod-toolkit-utils": "^1.1.2"
