@@ -26,6 +26,7 @@
     "hermes-protocol": "^0.4.2"
   },
   "dependencies": {
-    "mqtt": "^3.0.0"
+    "mqtt": "^3.0.0",
+    "rimraf": "^3.0.2"
   }
 }
