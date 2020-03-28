@@ -55,24 +55,29 @@ importers:
       fetch-mock: 9.3.1
       hermod-toolkit-runner: 'link:../toolkit-runner'
       jest: 25.2.3
+      jest-cli: 25.2.3
       mqtt: 3.0.0
       nodemon-webpack-plugin: 4.3.1_webpack@4.42.1
       rimraf: 3.0.2
       ts-jest: 25.2.1_jest@25.2.3
       webpack: 4.42.1_webpack@4.42.1
+    devDependencies:
+      '@types/jest': 25.1.4
     specifiers:
       '@babel/core': ^7.9.0
       '@babel/plugin-proposal-class-properties': ^7.8.3
       '@babel/plugin-proposal-object-rest-spread': ^7.9.0
       '@babel/preset-env': ^7.9.0
       '@babel/preset-typescript': ^7.9.0
+      '@types/jest': ^25.1.4
       babel-loader: ^8.1.0
       chalk: ^3.0.0
       clean-webpack-plugin: ^3.0.0
       commander: ^5.0.0
       fetch-mock: ^9.3.1
       hermod-toolkit-runner: ^1.1.2
-      jest: ^25.2.0
+      jest: ^25.2.3
+      jest-cli: ^25.2.3
       mqtt: ^3.0.0
       nodemon-webpack-plugin: ^4.3.1
       rimraf: ^3.0.2
@@ -2045,8 +2050,8 @@ packages:
   /browserslist/4.11.0:
     dependencies:
       caniuse-lite: 1.0.30001038
-      electron-to-chromium: 1.3.388
-      node-releases: 1.1.52
+      electron-to-chromium: 1.3.390
+      node-releases: 1.1.53
       pkg-up: 3.1.0
     dev: false
     hasBin: true
@@ -2735,10 +2740,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-OoOpBOVDUyh4dMVkt1SThoSamMk=
-  /electron-to-chromium/1.3.388:
+  /electron-to-chromium/1.3.390:
     dev: false
     resolution:
-      integrity: sha512-/FNHDmNmI4IR/qY+uuAVq8OET5S9J7d5QfQUnAz0edkhl02BjtOflF2H0RXKapVtJfMgaFthKBzeYJAzOaW8PA==
+      integrity: sha512-4RvbM5x+002gKI8sltkqWEk5pptn0UnzekUx8RTThAMPDSb8jjpm6SwGiSnEve7f85biyZl8DMXaipaCxDjXag==
   /elliptic/6.5.2:
     dependencies:
       bn.js: 4.11.8
@@ -5093,12 +5098,10 @@ packages:
     optional: true
     resolution:
       integrity: sha512-SVfQ/wMw+DesunOm5cKqr6yDcvUTDl/yc97ybGHMrteNEY6oekXpNpS3lZwgLlwz0FLgHoiW28ZpmBHUDg37cw==
-  /node-releases/1.1.52:
-    dependencies:
-      semver: 6.3.0
+  /node-releases/1.1.53:
     dev: false
     resolution:
-      integrity: sha512-snSiT1UypkgGt2wxPqS6ImEUICbNCMb31yaxWrOLXjhlt2z2/IBpaOxzONExqSm4y5oLnAqjjRWu+wsDzK5yNQ==
+      integrity: sha512-wp8zyQVwef2hpZ/dJH7SfSrIPD6YoJz6BDQDpGEkcA0s3LpAQoxBIYmfIq6QAhC1DhwsyCgTaTTcONwX8qzCuQ==
   /nodemon-webpack-plugin/4.3.1_webpack@4.42.1:
     dependencies:
       nodemon: 2.0.2
