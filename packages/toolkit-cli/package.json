@@ -37,7 +37,7 @@
     "jest": "^25.2.0",
     "mqtt": "^3.0.0",
     "nodemon-webpack-plugin": "^4.3.1",
-    "hermod-toolkit-runner": "file:../toolkit-runner",
+    "hermod-toolkit-runner": "^1.1.2",
     "rimraf": "^3.0.2",
     "ts-jest": "^25.2.1",
     "webpack": "^4.42.1"
