@@ -33,7 +33,7 @@ importers:
       '@typescript-eslint/parser': ^2.24.0
       eslint: ^6.8.0
       eslint-plugin-jest: ^23.8.2
-      hermod-toolkit-cli: ^1.0.7
+      hermod-toolkit-cli: ^1.0.8
       hermod-toolkit-runner: ^1.1.2
       hermod-toolkit-tests: ^1.1.2
       hermod-toolkit-utils: ^1.1.3
