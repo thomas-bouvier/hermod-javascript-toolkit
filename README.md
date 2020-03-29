@@ -17,7 +17,7 @@ Then use it in your package.json file scripts.
 "scripts": {
     "build": "hermod-toolkit build",
     "dev": "hermod-toolkit dev",
-    "test": "hermod-toolkit test '^.*\\.spec\\.[jt]s$'",
+    "test": "hermod-toolkit test",
     "launch": "hermod-toolkit run"
 }
 ```
@@ -31,7 +31,7 @@ Assumes that your action is structured in the following way by default:
 |
 ├── dist              # the action build output folder
 |
-├── tests             # tests folder
+├── tests             # tests folder (can't be changed)
 |   └── *.spec.[tj]s  # any number of test files
 |
 ├── package.json      # with an extra "sandbox" key, highlighted lower in the documentation
@@ -81,7 +81,7 @@ Check [the node.js website](https://nodejs.org/de/docs/guides/debugging-getting-
 Use the `-c/--config-path` if you need to use custom hermes options.
 Use the `-ns/--no-sandbox` to disable the sandbox.
 
-#### `hermod-toolkit test [files]`
+#### `hermod-toolkit test`
 
 Runs your test suite with [jest](https://jestjs.io/).
 
