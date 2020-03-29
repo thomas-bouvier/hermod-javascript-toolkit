@@ -11,7 +11,10 @@ module.exports = {
         path.join(__dirname, 'dist', 'tests', 'hooks')
     ],
     testPathIgnorePatterns: ['/node_modules/', '/src/', '/dist/', '/esm/'],
-    testMatch: ['**/tests/**/*.[jt]s?(x)'],
+    testMatch: ['**/tests/**/*.(spec|test).[jt]s?(x)'],
+    transform: {
+        '^.+\\.ts?$': 'ts-jest',
+    },
     globals: {
         __DEV__: true,
         runnerTarget: global['runnerTarget'] ? path.resolve(global['runnerTarget']) : undefined,

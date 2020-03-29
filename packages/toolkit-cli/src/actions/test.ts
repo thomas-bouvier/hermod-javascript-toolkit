@@ -7,5 +7,5 @@ export function test ({ target, sandbox }) {
     global['runnerTarget'] = target
     global['sandboxedRunner'] = !!sandbox
 
-    run([`--config ${configLocation}`])
+    run(['--config', `${configLocation}`])
 }
