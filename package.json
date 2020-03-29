@@ -48,7 +48,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "hermod-toolkit-cli": "file:packages/toolkit-cli",
+    "hermod-toolkit-cli": "^1.0.9",
     "hermod-toolkit-runner": "^1.1.2",
     "hermod-toolkit-tests": "^1.1.2",
     "hermod-toolkit-utils": "^1.1.3",
