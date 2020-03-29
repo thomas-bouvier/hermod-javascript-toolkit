@@ -16,7 +16,7 @@ program
     .option('-o, --output <path>', 'A path for the bundled file to be saved in.')
     .action(actions.build)
 program
-    .command('test [files]')
+    .command('test')
     .description('Runs your test suite.')
     .allowUnknownOption()
     .option('-t, --target <path>', 'The path to the directory containing the built action.')
